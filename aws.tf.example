@@ -1,0 +1,7 @@
+provider "aws" {
+  profile = "YOUR_PROFILE"
+  region = local.aws_region
+  assume_role {
+    role_arn = local.role_arn_cluster_admin
+  }
+}
