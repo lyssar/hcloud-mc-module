@@ -3,6 +3,10 @@ variable "hcloud_token" {
     sensitive = true
 }
 
+variable "rcon_pw" {
+    sensitive = true
+}
+
 variable "system_user_password" {
     default = "$6$o/N2KhKfqcP4$4mGl9UobHJR/67A1Z.Pf8Mrc.1ziWqUe6Lr6f9lwukQHPdaNKSfeAcbPpxD71E6AgRFhRp8vtLjgd0laDK.yJ."
 }
@@ -16,25 +20,42 @@ variable "private_key" {
     sensitive = true
 }
 
-# ATM6 Config
-variable "atm6" {
-    type = object({
-        enable = optional(bool)
-        instance_location = optional(string)
-        instance_ip_range = optional(string)
-        instance_name = optional(string)
-        instance_image = optional(string)
-        instance_type = optional(string)
-        instance_backups = optional(bool)
-        gamemode = optional(string)
-        difficulty = optional(string)
-        world_seed = optional(string)
-        world_generation_type = optional(string)
-        world_name = optional(string)
-        max_players = optional(number)
-        server_port = optional(number)
-        rcon_port = optional(number)
-        rcon_pw = optional(string)
-    })
-    description = "ATM6 configurations."
+variable "server_java_version" {
+    default = "8"
+}
+
+variable "mc_download_version" {
+    default = "1.0.9"
+}
+
+variable "instance_image" {
+    default = "ubuntu-20.04"
+}
+
+variable "instance_ip_range" {
+    default = "10.0.1.0/24"
+}
+
+variable "instance_location" {
+    default = "nbg1"
+}
+
+variable "instance_name" {
+    default = "minecraft-server"
+}
+
+variable "instance_type" {
+    default = "cx41"
+}
+
+variable "instance_backups" {
+    default = false
+}
+
+variable "server_port" {
+    default = 25565
+}
+
+variable "rcon_port" {
+    default = 25575
 }
