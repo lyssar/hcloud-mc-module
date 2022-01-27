@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mcdownloaderFileURL="https://github.com/lyssar/mcdownloader/releases/download/${mc_download_version}/mcdownloader"
+msdcliFileURL="https://github.com/lyssar/msdcli/releases/download/${mc_download_version}/msdcli-amd64"
 
 apt-get update
 apt-get install -y \
@@ -14,8 +14,8 @@ apt-get install -y \
 
 user_password=$(perl -e 'print crypt($ARGV[0], "password")' "oxofrmbl")
 
-curl -o /usr/local/bin/mcdownloader $mcdownloaderFileURL
-chmod +x /usr/local/bin/mcdownloader
+curl -Lo /usr/local/bin/msdcli $msdcliFileURL
+chmod +x /usr/local/bin/msdcli
 
 useradd -m -p ${user_password} -s /bin/bash minecraft
 mkdir -p /var/log/minecraft/${intance_name}

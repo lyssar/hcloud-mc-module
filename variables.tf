@@ -25,7 +25,7 @@ variable "server_java_version" {
 }
 
 variable "mc_download_version" {
-    default = "1.0.9"
+    default = "1.1.0"
 }
 
 variable "instance_image" {
