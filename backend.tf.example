@@ -1,0 +1,10 @@
+terraform {
+    experiments = [module_variable_optional_attrs]
+    backend "s3" {                  # Backend designation
+        profile = "AWS_PROFILE"
+        bucket = "BUCKET_NAME"      # Bucket name
+        key = "STATE_KEY.tfstate"   # Key
+        region = "eu-central-1"     # Region
+        encrypt = "true"            # Encryption enabled
+    }
+}
