@@ -1,5 +1,5 @@
 resource "hcloud_server" "minecraft_server" {
-    name = "mc-atm6-${var.instance_name}"                     # Name server
+    name = "mc-${var.instance_name}-${var.instance_name}"                     # Name server
     image = "${var.instance_image}"                  # Basic image
     server_type = "${var.instance_type}"             # Instance type
     location = "${var.instance_location}"            # Region
