@@ -24,8 +24,8 @@ variable "server_java_version" {
     default = "8"
 }
 
-variable "mc_download_version" {
-    default = "1.1.0"
+variable "msdcli_version" {
+    default = "1.2.0"
 }
 
 variable "instance_image" {

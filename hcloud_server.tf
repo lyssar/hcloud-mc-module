@@ -27,7 +27,7 @@ data "template_file" "server_instance" {
     template = "${file("${path.module}/templates/instance.tpl")}"
     vars = {
         "user_password" = var.system_user_password
-        "mc_download_version" = var.mc_download_version
+        "msdcli_version" = var.msdcli_version
         "server_java_version" = var.server_java_version
         "intance_name" = var.instance_name
     }

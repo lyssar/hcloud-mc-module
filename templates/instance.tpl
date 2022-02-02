@@ -1,6 +1,6 @@
 #!/bin/bash
 
-msdcliFileURL="https://github.com/lyssar/msdcli/releases/download/${mc_download_version}/msdcli-amd64"
+msdcliFileURL="https://github.com/lyssar/msdcli/releases/download/${msdcli_version}/msdcli-amd64"
 
 apt-get update
 apt-get install -y \
