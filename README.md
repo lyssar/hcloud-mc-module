@@ -17,7 +17,8 @@
 ## Install
 
 
-You will reference the module directly as module.source from github. Make
+You will reference the module directly as module.source from github. Make sure you 
+have terraform installed, see [requirements](#requirements)
 
 ```sh
 module "minecraft-hcloud-example" {
